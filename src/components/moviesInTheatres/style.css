@@ -37,7 +37,7 @@ div.cardsContainer {
   border-radius: 3rem;
 }
 
-div.movieCard:hover {
+.movieCard:hover {
   cursor: pointer;
   transform: scale(0.99);
   filter: brightness(0.9);
