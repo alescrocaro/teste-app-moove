@@ -1,12 +1,12 @@
 # Instruções
 
-## Como instalar?
+## Como instalar
 
 ```
 npm install
 ```
 
-## Como executar?
+## Como executar
 
 ```
 npm start
