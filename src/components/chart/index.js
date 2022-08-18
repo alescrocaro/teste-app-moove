@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React /* { useState, useEffect } */ from 'react';
 import { Chart } from 'react-google-charts';
 
 const data = [
@@ -27,7 +27,7 @@ const options = {
 };
 
 export default function MyChart() {
-  const [movies, setMovies] = useState([]);
+  //const [movies, setMovies] = useState([]);
 
   return (
     <Chart chartType="BarChart" width="100%" data={data} options={options} />
