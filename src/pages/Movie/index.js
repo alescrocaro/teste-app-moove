@@ -45,13 +45,22 @@ export default function Movie() {
               className="posterImgDetails"
             />
           </div>
+
           <div className="overview">
-            <h2>Detalhes</h2>
-            <p>- {movie.genre}</p>
-            <p>- {movie.runtime} minutos</p>
-            <h2>Sinopse</h2>
-            <p>{movie.tagline}</p>
-            <p>{movie.overview}</p>
+            {(movie.genre || movie.runtime) && (
+              <>
+                <h2>Detalhes</h2>
+                <p>- {movie.genre}</p>
+                <p>- {movie.runtime} minutos</p>
+              </>
+            )}
+            {movie.overview && (
+              <>
+                <h2>Sinopse</h2>
+                <p>{movie.tagline}</p>
+                <p>{movie.overview}</p>
+              </>
+            )}
           </div>
         </div>
       </div>
