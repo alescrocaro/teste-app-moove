@@ -51,7 +51,7 @@ export default function Movie() {
               <>
                 <h2>Detalhes</h2>
                 <p>- {movie.genre}</p>
-                <p>- {movie.runtime} minutos</p>
+                {movie.runtime > 0 && <p>- {movie.runtime} minutos</p>}
               </>
             )}
             {movie.overview && (
