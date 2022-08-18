@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(50, 0, 131);
+  color: white;
+  font-weight: bold;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  color: white;
+
+  transform: translateY(100%);
+  transition: 1500ms;
+}
