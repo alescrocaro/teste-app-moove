@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-import { api } from '../../services/api';
+import { api, api_key } from '../../services/api';
 
 export default function Search() {
   const [searchText, setSearchText] = useState('');
@@ -11,13 +11,11 @@ export default function Search() {
   const getData = async () => {
     let data = {};
     if (searchText === '') {
-      data = await api.get(
-        'movie/popular?api_key=0b52f543bf49e978de68ec261123f4f2&language=pt-BR'
-      );
+      data = await api.get(`movie/popular?api_key=${api_key}&language=pt-BR`);
       console.log('nada');
     } else {
       data = await api.get(
-        `/search/movie?api_key=0b52f543bf49e978de68ec261123f4f2&query="${searchText}"&language=pt-BR`
+        `/search/movie?api_key=${api_key}&query="${searchText}"&language=pt-BR`
       );
       console.log('pesquisou ', searchText);
     }

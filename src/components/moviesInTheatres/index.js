@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-import { api } from '../../services/api';
+import { api, api_key } from '../../services/api';
 
 export default function MoviesInTheatres() {
   const [movies, setMovies] = useState([]);
 
   const getData = async () => {
     let data = await api.get(
-      '/movie/now_playing?api_key=0b52f543bf49e978de68ec261123f4f2&language=pt-BR'
+      `/movie/now_playing?api_key=${api_key}&language=pt-BR`
     );
 
     data = data.data.results;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { api } from '../../services/api';
+import { api, api_key } from '../../services/api';
 import './style.css';
 
 import Header from '../../components/header';
@@ -10,9 +10,7 @@ export default function Movie() {
   const { id } = useParams();
 
   const getData = async () => {
-    let data = await api.get(
-      `/movie/${id}?api_key=0b52f543bf49e978de68ec261123f4f2&language=pt-BR`
-    );
+    let data = await api.get(`/movie/${id}?api_key=${api_key}&language=pt-BR`);
     console.log(data.data);
 
     data.data.genre = data.data.genres[0].name;
