@@ -30,7 +30,7 @@ export default function MoviesInTheatres() {
         {movies.map(movie => (
           <Link to={`movie/${movie.id}`} key={movie.id} className="movieCard">
             <img
-              src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt="Poster"
               className="posterImg"
             />
