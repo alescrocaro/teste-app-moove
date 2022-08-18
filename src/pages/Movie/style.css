@@ -1,0 +1,99 @@
+div.movieContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 3rem 5rem;
+}
+
+.backToHome {
+  position: fixed;
+  left: 3rem;
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  border-radius: 50%;
+}
+
+.backToHome:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+h1.title {
+  font-size: 4rem;
+  color: rgb(196, 130, 238);
+  text-shadow: 0 0 3rem black;
+}
+
+div.details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+div.movieCardDetails {
+  width: 50%;
+
+  border-radius: 1rem;
+}
+
+img.posterImgDetails {
+  width: 90%;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem 0.1rem black;
+}
+
+div.overview {
+  width: 45%;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 3rem;
+
+  box-shadow: 0 0.2rem 1rem 0.1rem black;
+  background-color: rgb(44, 5, 107);
+}
+
+div.overview > h2 {
+  color: rgb(190, 110, 240);
+  font-size: 3rem;
+}
+
+div.overview > p {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1300px) {
+  h1.title {
+    margin-top: 4rem;
+    font-size: 3.5rem;
+  }
+
+  div.details {
+    width: 85%;
+  }
+
+  div.movieCardDetails {
+    width: 100%;
+    height: 140%;
+    margin-bottom: 3rem;
+    height: auto;
+  }
+
+  img.posterImgDetails {
+    width: 100%;
+  }
+
+  div.overview {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  div.overview > h2 {
+    font-size: 2rem;
+  }
+
+  div.overview > p {
+    font-size: 1.1rem;
+  }
+}
