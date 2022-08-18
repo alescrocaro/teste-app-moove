@@ -4,6 +4,7 @@ import './style.css';
 import Header from '../../components/header';
 import Search from '../../components/search';
 import MoviesInTheatres from '../../components/moviesInTheatres';
+import Chart from '../../components/chart';
 
 export default function Home() {
   const [pageYPosition, setPageYPosition] = useState(0);
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <Search />
       <MoviesInTheatres />
+      {/* <Chart /> */}
     </>
   );
 }
